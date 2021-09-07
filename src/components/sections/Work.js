@@ -9,14 +9,19 @@ export default function Work() {
       <h2 className="section-title">Trabajos realizados</h2>
       <div className="section-work-list">
         {works.map((work) => {
-          const { id, img, name } = work;
-          const formattedName = name.toLowerCase().replaceAll(' ', '-');
+          const {
+            id,
+            name,
+            img: { single: singleImg },
+            url: { local: localUrl },
+          } = work;
+
           return (
-            <Link key={id} to={`/work/${formattedName}`}>
+            <Link key={id} to={`/work/${localUrl}`}>
               <div className="section-work-list-item">
                 <img
                   className="section-work-list-item-img"
-                  src={`../images/work/${img.single}`}
+                  src={`../images/work/${singleImg}`}
                   alt={`preview of ${name}`}
                 />
                 <div>

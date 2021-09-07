@@ -23,39 +23,69 @@ export default function SingleWork() {
 
   const {
     name: workName,
+    url: { external: externalUrl },
     img,
-    img: { single: singleImg, process: processImg },
+    img: { single: singleImg },
     tasks,
   } = currentWork;
 
   return (
     <section className="section">
-      <h2 className="section-secondary-title">{workName}</h2>
-      {img && (
-        <>
-          {singleImg && (
-            <img src={`../images/work/${singleImg}`} alt={workName} />
-          )}
-        </>
-      )}
+      <h2 className="section-secondary-title section-single-work-title">
+        {workName}
+      </h2>
+      <div className="section-single-work-main-info">
+        {img && (
+          <>
+            {singleImg && (
+              <img
+                className="section-single-work-img"
+                src={`../images/work/${singleImg}`}
+                alt={workName}
+              />
+            )}
+          </>
+        )}
+
+        {externalUrl && (
+          <a
+            className="btn section-single-work-link"
+            href={externalUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Ver ejemplo en vivo
+          </a>
+        )}
+      </div>
 
       {tasks && (
         <>
           <h3 className="section-title">Lo que hice</h3>
-          {tasks.map((task) => {
-            const { id, name, img } = task;
-            return (
-              <li key={id}>
-                <h4>{name}</h4>
-                {img && (
-                  <img
-                    src={`../images/work/${img}`}
-                    alt={`Imagen de el proceso ${id}`}
-                  />
-                )}
-              </li>
-            );
-          })}
+          <ul className="section-single-work-item-list">
+            {tasks.map((task) => {
+              const { id, name, img, description } = task;
+              return (
+                <li key={id} className="section-single-work-item">
+                  <h4 className="section-tertiary-title section-single-work-item-name">
+                    {name}
+                  </h4>
+                  {img && (
+                    <img
+                      className="section-single-work-item-img"
+                      src={`../images/work/${img}`}
+                      alt={`Imagen del proceso ${id + 1}`}
+                    />
+                  )}
+                  {description && (
+                    <p className="section-single-work-item-desc">
+                      {description}
+                    </p>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
         </>
       )}
     </section>

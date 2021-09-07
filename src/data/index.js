@@ -112,18 +112,36 @@ export const works = [
     id: 0,
     preview: 'example.jpg',
     name: 'example one testing',
+    url: {
+      local: 'example-one-testing',
+      external: 'https://example.com',
+    },
     img: {
       single: 'example.png',
     },
     tasks: [
-      { id: 0, name: 'tarea 1', img: 'example.png' },
-      { id: 1, name: 'tarea 2' },
+      {
+        id: 0,
+        name: 'tarea 1',
+        img: 'example.png',
+        description:
+          'Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur',
+      },
+      {
+        id: 1,
+        name: 'tarea 2',
+        description: 'Descripción de la tarea 2 del trabajo 1',
+      },
     ],
   },
   {
     id: 1,
     preview: 'example.jpg',
     name: 'another example',
+    url: {
+      local: 'another-example',
+      external: 'https://another-example.com',
+    },
     img: {
       single: 'example.png',
     },

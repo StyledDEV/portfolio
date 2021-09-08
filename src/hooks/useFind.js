@@ -4,7 +4,7 @@ const useFind = (list, field, value) => {
   const [found, setFound] = useState();
 
   const getFound = useCallback(() => {
-    const foundItem = list.find((item) => item[field] === value);
+    const foundItem = list.find((item) => item[field].toLowerCase() === value);
     if (foundItem) setFound(foundItem);
   }, [list, field, value]);
 

@@ -2,11 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
+import About from './pages/About';
 import SingleWork from './pages/SingleWork';
 
 import Header from './components/header';
 import Footer from './components/footer';
-import SectionAbout from './components/sections/About';
 import SectionContact from './components/sections/Contact';
 import SectionWork from './components/sections/Work';
 
@@ -28,7 +28,7 @@ export default function App() {
                 <Home />
               </Route>
               <Route exact path="/about">
-                <SectionAbout />
+                <About />
               </Route>
               <Route exact path="/contact">
                 <SectionContact />
@@ -39,7 +39,7 @@ export default function App() {
 
               <Route exact path="/work/:name" component={SingleWork} />
               <Route path="*">
-                <h4>404</h4>
+                <h4 className="section-title">Página no encontrada</h4>
               </Route>
             </Switch>
             <Footer siteName={siteName} />

@@ -110,41 +110,44 @@ export const skills = [
 export const works = [
   {
     id: 0,
-    preview: 'example.jpg',
-    name: 'example one testing',
+    name: 'DiscordVote',
     url: {
-      local: 'example-one-testing',
-      external: 'https://example.com',
+      external: 'https://discordvote.net',
     },
     img: {
-      single: 'example.png',
+      single: 'discordvote.png',
     },
     tasks: [
       {
         id: 0,
-        name: 'tarea 1',
-        img: 'example.png',
+        name: 'Solucionar problemas de estilos',
         description:
-          'Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur',
+          'Aprendí las bases de StyledComponents y optimicé varios trozos de código CSS en los componentes de React, para que no se repitiera tanto código.',
       },
       {
         id: 1,
-        name: 'tarea 2',
-        description: 'Descripción de la tarea 2 del trabajo 1',
+        name: 'Aprender Git',
+        description:
+          'Estudié Git para poder manejarme con los comandos en la terminal y así poder colaborar de mejor manera con el proyecto, ya que habíamos empezado colaborando con un plugin de Visual Studio Code.',
+      },
+      {
+        id: 2,
+        name: 'Adaptar diseños a código',
+        description:
+          'Con los diseños que me enviaba la persona con la que colaboraba, realicé diferentes partes de la aplicación, como la página de información y gestión de los bots o servidores, incluyendo un menú lateral.',
+      },
+      {
+        id: 3,
+        name: 'Mejoras del código en general',
+        description:
+          'Hice parte de la adaptación a móviles, algunas mejoras en la organización de los Styled Components, al igual que correcciones en sectores de la aplicación como el perfil del usuario y el campo de búsqueda.',
+      },
+      {
+        id: 4,
+        name: 'Aprendizaje',
+        description:
+          'Gracias a la comunicación que tuve con quien colaboré, pude mejorar algunas cosas de mi inglés al igual que mis conocimientos técnicos, y a cambio le ayudé a entender algunos conceptos de CSS',
       },
     ],
-  },
-  {
-    id: 1,
-    preview: 'example.jpg',
-    name: 'another example',
-    url: {
-      local: 'another-example',
-      external: 'https://another-example.com',
-    },
-    img: {
-      single: 'example.png',
-    },
-    tasks: [{ id: 0, name: 'tarea 1', img: 'example.png' }],
   },
 ];

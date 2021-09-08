@@ -13,11 +13,10 @@ export default function Work() {
             id,
             name,
             img: { single: singleImg },
-            url: { local: localUrl },
           } = work;
-
+          const formattedName = name.toLowerCase().replaceAll(' ', '-');
           return (
-            <Link key={id} to={`/work/${localUrl}`}>
+            <Link key={id} to={`/work/${formattedName}`}>
               <div className="section-work-list-item">
                 <img
                   className="section-work-list-item-img"

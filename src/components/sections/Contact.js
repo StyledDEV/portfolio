@@ -14,10 +14,17 @@ export default function Contact() {
           >
             apbdev.contact@gmail.com
           </a>
+          <a
+            className="section-contact-list-item-value"
+            href="mailto:alwl1@hotmail.com"
+            title="Enviar correo a alwl1@hotmail.com"
+          >
+            alwl1@hotmail.com
+          </a>
         </li>
         <li className="section-contact-list-item">
           <span className="section-contact-list-item-name">
-            WhatsApp (sólo mensaje)
+            WhatsApp (sólo mensajes)
           </span>
           <span className="section-contact-list-item-value">
             +54 11-3047-1566

@@ -32,8 +32,10 @@ export default function About({ isAboutPage }) {
           <article className="section-article">
             <h2 className="section-title">Mis valores</h2>
             <p className="section-paragraph">
-              Respetar y no desprestigiar lo que alguien dice, tener aptitud en
-              lo que se hace, ser sincero para ayudar a quienes buscan mejorar.
+              Siempre intento respetar a todos por igual, sin desprestigiar lo
+              que puedan pensar o decir, e intento mejorar como más pueda en lo
+              que hago. También soy sincero, porque me parece que es algo que
+              puede ayudarnos a mejorar en todos los aspectos.
             </p>
           </article>
         </>

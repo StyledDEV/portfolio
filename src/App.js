@@ -1,20 +1,22 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+// Pages
 import Home from './pages/Home';
 import About from './pages/About';
+import Contact from './pages/Contact';
+import Work from './pages/Work';
 import SingleWork from './pages/SingleWork';
+import NotFound from './pages/NotFound';
 
+// Components
 import Header from './components/header';
 import Footer from './components/footer';
-import SectionContact from './components/sections/Contact';
-import SectionWork from './components/sections/Work';
 
+// Context, JSON data and images
 import { DataContext } from './context/DataContext';
-import { icons, skills, works } from './data';
+import { icons, skills, siteName, works } from './data';
 import logo from './images/logo.png';
-
-const siteName = 'Agustin Piriz';
 
 export default function App() {
   return (
@@ -31,18 +33,17 @@ export default function App() {
                 <About />
               </Route>
               <Route exact path="/contact">
-                <SectionContact />
+                <Contact />
               </Route>
               <Route exact path="/work">
-                <SectionWork />
+                <Work />
               </Route>
-
               <Route exact path="/work/:name" component={SingleWork} />
               <Route path="*">
-                <h4 className="section-title">Página no encontrada</h4>
+                <NotFound />
               </Route>
             </Switch>
-            <Footer siteName={siteName} />
+            <Footer />
           </main>
         </div>
       </Router>

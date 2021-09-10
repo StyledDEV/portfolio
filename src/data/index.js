@@ -1,4 +1,6 @@
-const email = 'apbdev.contact@gmail.com';
+export const emailList = ['apbdev.contact@gmail.com', 'alwl1@hotmail.com'];
+
+export const siteName = 'Agustin Piriz';
 
 export const links = [
   {
@@ -45,7 +47,7 @@ export const icons = [
   {
     id: 2,
     img: 'email.png',
-    url: `${email}`,
+    url: `${emailList[0]}`,
     name: 'Correo',
     type: 'email',
   },
@@ -147,6 +149,60 @@ export const works = [
         name: 'Aprendizaje',
         description:
           'Gracias a la comunicación que tuve con quien colaboré, pude mejorar algunas cosas de mi inglés al igual que mis conocimientos técnicos, y a cambio le ayudé a entender algunos conceptos de CSS',
+      },
+    ],
+  },
+  {
+    id: 1,
+    name: 'Portafolio propio',
+    url: {
+      external: 'https://agustin-piriz.com/',
+    },
+    img: {
+      single: 'own-portfolio.png',
+    },
+    tasks: [
+      {
+        id: 0,
+        name: 'Buscar diseños en Dribbble',
+        description:
+          'Me metí a ver diseños en Dribbble con tal de obtener inspiración para el diseño de la página.',
+      },
+      {
+        id: 1,
+        name: 'Bocetaje',
+        description:
+          'Luego de ver algunos diseños, empecé a dibujar bocetos para saber cómo sería el diseño final.',
+      },
+      {
+        id: 2,
+        name: 'Pensé los textos que pondría',
+        description:
+          'Usé algo de tiempo para pensar en el texto que iría en el sitio, intentando ser claro con las palabras para que se entienda lo que quiero comunicar.',
+      },
+      {
+        id: 3,
+        name: 'Diseño en Figma',
+        description:
+          'Con Figma hice las distintas partes del sitio basándome en los bocetos que había hecho anteriormente, y agregué algunos detalles al diseño final.',
+      },
+      {
+        id: 4,
+        name: 'Codificación',
+        description:
+          'Inicié con la creación de los componentes base del proyecto y al notar que el código se hacía menos legible y escalable, implementé el hook useContext de React, al igual que datos en formato JSON, y separé algo de código en variables para entenderlo con mayor facilidad.',
+      },
+      {
+        id: 5,
+        name: 'Aprendizaje',
+        description:
+          'Aprendí algunas cosas acerca del object destructuring en JavaScript, al igual que sobre el manejo de rutas en React, creación y uso de Custom Hooks, etc.',
+      },
+      {
+        id: 6,
+        name: 'Deployment',
+        description:
+          'Hice una carpeta lista para funcionar en un hosting y subí los archivos. Finalmente configuré las DNS para que se conecte todo al dominio y a la vez tener un certificado SSL.',
       },
     ],
   },

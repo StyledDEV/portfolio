@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import Modal from '../components/Modal';
+import SingleTask from '../components/SingleTask';
 import { DataContext } from '../context/DataContext';
 import { Link, useParams } from 'react-router-dom';
 import useFind from '../hooks/useFind';
@@ -9,10 +10,13 @@ export default function SingleWork() {
   const [showModal, setShowModal] = useState(false);
   const [modalImg, setModalImg] = useState(null);
 
+  // Work list
   const { works } = useContext(DataContext);
+  /* Get the param (/work/:name) in the URL and
+  try to find out the single work */
   const { name } = useParams();
   const newName = name.replaceAll('-', ' ');
-  const { found } = useFind(works, 'name', newName);
+  const { found } = useFind({ list: works, field: 'name', value: newName });
 
   useEffect(() => {
     if (found) setCurrentWork(found);
@@ -22,6 +26,7 @@ export default function SingleWork() {
     return <h1>404</h1>;
   }
 
+  // found work destructuring
   const {
     name: workName,
     url: { external: externalUrl },
@@ -30,7 +35,7 @@ export default function SingleWork() {
     tasks,
   } = currentWork;
 
-  const showWorkImg = (img) => {
+  const showWorkImgInModal = (img) => {
     document.documentElement.style.overflowY = 'hidden';
     setShowModal(true);
     setModalImg({ ...img });
@@ -53,9 +58,9 @@ export default function SingleWork() {
                 <img
                   className="section-single-work-img"
                   src={`../images/work/${singleImg}`}
-                  alt={workName}
+                  alt={`Imagen de previsualización de ${workName}`}
                   onClick={() =>
-                    showWorkImg({
+                    showWorkImgInModal({
                       src: `../images/work/${singleImg}`,
                       alt: name,
                     })
@@ -81,28 +86,9 @@ export default function SingleWork() {
           <>
             <h3 className="section-title">Lo que hice</h3>
             <ul className="section-single-work-item-list">
-              {tasks.map((task) => {
-                const { id, name, img, description } = task;
-                return (
-                  <li key={id} className="section-single-work-item">
-                    <h4 className="section-tertiary-title section-single-work-item-name">
-                      {name}
-                    </h4>
-                    {img && (
-                      <img
-                        className="section-single-work-item-img"
-                        src={`../images/work/${img}`}
-                        alt={`Imagen del proceso ${id + 1}`}
-                      />
-                    )}
-                    {description && (
-                      <p className="section-single-work-item-desc">
-                        {description}
-                      </p>
-                    )}
-                  </li>
-                );
-              })}
+              {tasks.map((task) => (
+                <SingleTask key={task.id} task={task} />
+              ))}
             </ul>
           </>
         )}

@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 
-const useFind = (list, field, value) => {
+const useFind = ({ list, field, value }) => {
   const [found, setFound] = useState();
 
   const getFound = useCallback(() => {

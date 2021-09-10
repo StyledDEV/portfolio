@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { DataContext } from '../../context/DataContext';
+import SingleIcon from '../SingleIcon';
 
 export default function Sidebar() {
   const { icons, siteName, logo } = useContext(DataContext);
@@ -11,33 +12,9 @@ export default function Sidebar() {
       </Link>
       <div>
         {icons &&
-          icons.map((icon) => {
-            const { id, img, url, name, type } = icon;
-            const isEmail = type === 'email';
-            const linkUrl = isEmail ? `mailto:${url}` : url;
-            const linkTarget = !isEmail ? '_blank' : null;
-            const linkTitle = isEmail
-              ? `Enviar correo a ${url}`
-              : `Ir al ${name} de ${siteName}`;
-
-            return (
-              <a
-                key={id}
-                className="sidebar-icon"
-                href={linkUrl}
-                target={linkTarget}
-                rel="noreferrer"
-                title={linkTitle}
-              >
-                <img
-                  draggable="false"
-                  className="sidebar-icon-img"
-                  src={`../images/icons/${img}`}
-                  alt={name}
-                />
-              </a>
-            );
-          })}
+          icons.map((icon) => (
+            <SingleIcon key={icon.id} icon={icon} siteName={siteName} />
+          ))}
       </div>
     </aside>
   );

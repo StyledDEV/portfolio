@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
+import useDocumentTitle from '../hooks/useDocumentTitle';
+import Loading from '../components/Loading';
 import Modal from '../components/Modal';
 import SingleTask from '../components/SingleTask';
 import { DataContext } from '../context/DataContext';
@@ -22,8 +24,10 @@ export default function SingleWork() {
     if (found) setCurrentWork(found);
   }, [found]);
 
+  useDocumentTitle(currentWork && currentWork.name);
+
   if (!currentWork) {
-    return <h1>404</h1>;
+    return <Loading />;
   }
 
   // found work destructuring

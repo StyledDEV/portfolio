@@ -431,7 +431,7 @@ a.section-skills-list-item {
   width: 500px;
   max-width: 100%;
   display: block;
-  cursor: pointer;
+  cursor: zoom-in;
   border-radius: var(--radius);
   border: var(--border);
 }

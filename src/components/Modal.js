@@ -9,7 +9,11 @@ export default function Modal({ img, setShowModal }) {
     <>
       <div className="overlay" onClick={closeModal}></div>
       <div className="modal">
-        {img && <img className="modal-img" {...img} alt={img.alt} />}
+        {img && (
+          <a href={`${img.src}`} target="_blank" rel="noreferrer">
+            <img className="modal-img" {...img} alt={img.alt} />
+          </a>
+        )}
       </div>
     </>
   );

@@ -33,7 +33,7 @@ export default function SingleWork() {
   // found work destructuring
   const {
     name: workName,
-    url: { external: externalUrl },
+    url: { external: externalUrl, repository },
     img,
     img: { single: singleImg },
     tasks,
@@ -82,6 +82,16 @@ export default function SingleWork() {
               rel="noreferrer"
             >
               Ver en vivo
+            </a>
+          )}
+          {repository && (
+            <a
+              className="btn section-single-work-link"
+              href={repository}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Ver repositorio
             </a>
           )}
         </div>

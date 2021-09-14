@@ -101,10 +101,15 @@ export const skills = [
   },
   {
     id: 9,
-    name: 'Español',
+    name: 'Sistemas Linux',
+    url: 'https://es.wikipedia.org/wiki/GNU/Linux',
   },
   {
     id: 10,
+    name: 'Español',
+  },
+  {
+    id: 11,
     name: 'Inglés',
   },
 ];
@@ -205,5 +210,72 @@ export const works = [
           'Hice una carpeta lista para funcionar en un hosting y subí los archivos. Finalmente configuré las DNS para que se conecte todo al dominio y a la vez tener un certificado SSL.',
       },
     ],
+  },
+  {
+    id: 2,
+    name: 'Grocery bud',
+    url: {
+      external: 'https://agustin-react-learning-grocery-bud.netlify.app/',
+      repository: 'https://github.com/StyledDEV/grocery-bud',
+    },
+    img: {
+      single: 'grocery-bud.png',
+    },
+    tasks: [
+      {
+        id: 0,
+        name: 'Creación de clases CSS para componentes principales',
+        description:
+          'Hice parte de los estilos que iban a utilizar los componentes principales de la app, para así guiarme de una mejor manera cuando haga la funcionalidad.',
+      },
+      {
+        id: 1,
+        name: 'Usé el hook reducer de React',
+        description:
+          'Gestioné el estado de la aplicación con useReducer, para así tener una mejor organización y que sea fácil manejar todos los cambios de estado.',
+      },
+      {
+        id: 2,
+        name: 'Hice el formulario para ingresar texto',
+        description:
+          'Creé el componente de formulario y le agregé los elementos, y manejé el texto de entrada con una función que es capaz de gestionar varios inputs a la vez, usando las propiedades name y value del input.',
+      },
+      {
+        id: 3,
+        name: 'Lista de elementos',
+        description:
+          'Agregué los componentes y las funciones encargadas de mostrar los elementos que contiene el estado.',
+      },
+      {
+        id: 4,
+        name: 'Hice la funcionalidad',
+        description:
+          'De esta manera conseguí cambiar los estados de la aplicación al añadir, editar o eliminar un elemento.',
+      },
+      {
+        id: 5,
+        name: 'Uso de la API localStorage',
+        description:
+          'Utilicé la API del navegador localStorage para guardar los elementos del estado en la memoria local.',
+      },
+      {
+        id: 6,
+        name: 'Aprendizaje',
+        description:
+          'En este mini proyecto aprendí a gestionar los estados de una aplicación de una mejor manera, también a cómo reemplazar el contenido de un elemento sin alterar el órden de la lista que lo contiene.',
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: 'Pricing component',
+    url: {
+      external: 'https://styleddev.github.io/challenges/pricing-component/',
+      repository:
+        'https://github.com/StyledDEV/challenges/tree/main/pricing-component',
+    },
+    img: {
+      single: 'pricing-component.png',
+    },
   },
 ];

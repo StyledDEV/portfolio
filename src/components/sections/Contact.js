@@ -7,7 +7,7 @@ export default function Contact() {
       <h2 className="section-title section-contact-title">Contacto</h2>
       <ul className="section-contact-list">
         <ListItem name="Correo" isEmail={true} />
-        <ListItem name="WhatsApp (sólo mensajes)" value="+54 11-3047-1566" />
+        <ListItem name="Teléfono" value="+54 11-3047-1566" />
         <ListItem name="Ubicación" value="Buenos Aires, Argentina" />
       </ul>
     </section>

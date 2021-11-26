@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 export default function About({ isAboutPage }) {
   return (
@@ -6,15 +6,15 @@ export default function About({ isAboutPage }) {
       <article className={isAboutPage && 'section-article'}>
         <h2 className="section-title">Conoceme</h2>
         <p className="section-paragraph">
-          Gracias a mi experiencia previa con la informática, me he dado cuenta
-          que hay muchas cosas que desconozco, pero a su vez, que me puedo
-          adaptar rápido a diferentes tecnologías y entornos.
+          Soy un chico de Buenos Aires, Argentina, que siempre intenta aprender
+          cuanto más y mejor pueda de diferentes cosas, incluyendo informática,
+          cocina, comportamiento animal y/o humano, etc.
         </p>
         <p className="section-paragraph">
-          Considero que la mejor manera de dominar una herramienta es intentando
-          enseñar su funcionamiento a quienes no saben nada de ella, y usarla en
-          proyectos que superen mi conocimiento, para de esa manera buscar
-          información, aprender y continuar el ciclo. ♻
+          En el ámbito del desarrollo, sobretodo en un proyecto, intento ver las
+          cosas como un usuario que no es desarrollador o diseñador, para saber
+          qué se puede mejorar para los usuarios que utilicen el software sin
+          agregar complicación extra.
         </p>
       </article>
 
@@ -24,8 +24,7 @@ export default function About({ isAboutPage }) {
             <h2 className="section-title">Aspiraciones</h2>
             <p className="section-paragraph">
               Busco un crecimiento personal y profesional que me de una buena
-              calidad de vida y la oportunidad de cumplir con mis propósitos
-              principales; ayudar animales y viajar.
+              calidad de vida y me ayude a aportar lo que pueda a otros.
             </p>
           </article>
 
@@ -41,5 +40,5 @@ export default function About({ isAboutPage }) {
         </>
       )}
     </section>
-  );
+  )
 }

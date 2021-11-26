@@ -1,6 +1,6 @@
-export const emailList = ['apbdev.contact@gmail.com', 'alwl1@hotmail.com'];
+export const emailList = ['apbdev.contact@gmail.com']
 
-export const siteName = 'Agustin Piriz';
+export const siteName = 'Agustin Piriz'
 
 export const links = [
   {
@@ -12,7 +12,7 @@ export const links = [
   {
     id: 1,
     url: '/about',
-    content: 'Conoceme',
+    content: 'Conoceme mejor',
     featured: false,
   },
   {
@@ -27,7 +27,7 @@ export const links = [
     content: 'Ver trabajos',
     featured: true,
   },
-];
+]
 
 export const icons = [
   {
@@ -51,7 +51,7 @@ export const icons = [
     name: 'Correo',
     type: 'email',
   },
-];
+]
 
 export const skills = [
   {
@@ -112,11 +112,90 @@ export const skills = [
     id: 11,
     name: 'Inglés',
   },
-];
+]
 
 export const works = [
   {
     id: 0,
+    name: 'TecnoSavio',
+    url: {
+      external: 'https://servicesavio.com',
+    },
+    img: {
+      single: 'tecnosavio.png',
+    },
+    tasks: [
+      {
+        id: 0,
+        name: 'Bocetaje',
+        description:
+          'Boceté la página teniendo en cuenta el contenido que iría en ella.',
+      },
+      {
+        id: 1,
+        name: 'Logotipo',
+        description:
+          'Hice el logotipo que llevaría la página con un nombre y un eslogan.',
+      },
+      {
+        id: 2,
+        name: 'Diseño',
+        description:
+          'Diseñé la página guiándome por el boceto que hice anteriormente y los colores que llevaría la misma.',
+      },
+      {
+        id: 3,
+        name: 'Estructura y estilos',
+        description:
+          'Creé la estructura del sitio según se mostraba en el diseño y le di la apariencia deseada en los diferentes tamaños de pantalla.',
+      },
+      {
+        id: 4,
+        name: 'Aprendizaje',
+        description:
+          'Aprendí a manejar colores de forma óptima en Figma y a declarar el contenido del sitio de una mejor manera, ',
+      },
+    ],
+  },
+  {
+    id: 1,
+    name: 'Juego de piedra papel o tijera',
+    url: {
+      external: 'https://styleddev.github.io/rock-paper-scissors-game',
+      repository: 'https://github.com/styleddev/rock-paper-scissors-game',
+    },
+    img: {
+      single: 'rock-paper-scissors-game.png',
+    },
+    tasks: [
+      {
+        id: 0,
+        name: 'Estructura y estilos',
+        description:
+          'Creé la estructura de la aplicación y le di vida con los estilos CSS de acuerdo al diseño.',
+      },
+      {
+        id: 1,
+        name: 'Funcionalidad',
+        description:
+          'Hice una función que se encarga de recibir la elección del usuario y la compara con la elección de la CPU, teniendo en cuenta las reglas del juego.',
+      },
+      {
+        id: 2,
+        name: 'Puntuación',
+        description:
+          'La puntuación del juego es guardada en el navegador del usuario para que cuando regrese al sitio el puntaje siga ahí.',
+      },
+      {
+        id: 3,
+        name: 'Aprendizaje',
+        description:
+          'Aprendí a crear mi primer juego web pequeño que sirvió para animarme a crear cosas fuera de lo que acostumbro a hacer y para disfrutar del desarrollo con algo divertido de realizar.',
+      },
+    ],
+  },
+  {
+    id: 2,
     name: 'DiscordVote',
     url: {
       external: 'https://discordvote.net',
@@ -158,10 +237,11 @@ export const works = [
     ],
   },
   {
-    id: 1,
+    id: 3,
     name: 'Portafolio propio',
     url: {
-      external: 'https://agustin-piriz.com/',
+      external: 'https://agustin-piriz.com',
+      repository: 'https://github.com/StyledDEV/portfolio',
     },
     img: {
       single: 'own-portfolio.png',
@@ -212,10 +292,10 @@ export const works = [
     ],
   },
   {
-    id: 2,
+    id: 4,
     name: 'Grocery bud',
     url: {
-      external: 'https://agustin-react-learning-grocery-bud.netlify.app/',
+      external: 'https://agustin-react-learning-grocery-bud.netlify.app',
       repository: 'https://github.com/StyledDEV/grocery-bud',
     },
     img: {
@@ -267,10 +347,10 @@ export const works = [
     ],
   },
   {
-    id: 3,
-    name: 'Pricing component',
+    id: 5,
+    name: 'Componente de precios',
     url: {
-      external: 'https://styleddev.github.io/challenges/pricing-component/',
+      external: 'https://styleddev.github.io/challenges/pricing-component',
       repository:
         'https://github.com/StyledDEV/challenges/tree/main/pricing-component',
     },
@@ -278,4 +358,4 @@ export const works = [
       single: 'pricing-component.png',
     },
   },
-];
+]

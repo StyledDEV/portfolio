@@ -1,33 +1,33 @@
-import React, { useState, useEffect, useContext } from 'react';
-import useDocumentTitle from '../hooks/useDocumentTitle';
-import Loading from '../components/Loading';
-import Modal from '../components/Modal';
-import SingleTask from '../components/SingleTask';
-import { DataContext } from '../context/DataContext';
-import { Link, useParams } from 'react-router-dom';
-import useFind from '../hooks/useFind';
+import React, { useState, useEffect, useContext } from 'react'
+import useDocumentTitle from '../hooks/useDocumentTitle'
+import NotFound from '../pages/NotFound'
+import Modal from '../components/Modal'
+import SingleTask from '../components/SingleTask'
+import { DataContext } from '../context/DataContext'
+import { Link, useParams } from 'react-router-dom'
+import useFind from '../hooks/useFind'
 
 export default function SingleWork() {
-  const [currentWork, setCurrentWork] = useState();
-  const [showModal, setShowModal] = useState(false);
-  const [modalImg, setModalImg] = useState(null);
+  const [currentWork, setCurrentWork] = useState()
+  const [showModal, setShowModal] = useState(false)
+  const [modalImg, setModalImg] = useState(null)
 
   // Work list
-  const { works } = useContext(DataContext);
+  const { works } = useContext(DataContext)
   /* Get the param (/work/:name) in the URL and
   try to find out the single work */
-  const { name } = useParams();
-  const newName = name.replaceAll('-', ' ');
-  const { found } = useFind({ list: works, field: 'name', value: newName });
+  const { name } = useParams()
+  const newName = name.replaceAll('-', ' ')
+  const { found } = useFind({ list: works, field: 'name', value: newName })
 
   useEffect(() => {
-    if (found) setCurrentWork(found);
-  }, [found]);
+    if (found) setCurrentWork(found)
+  }, [found])
 
-  useDocumentTitle(currentWork && currentWork.name);
+  useDocumentTitle(currentWork && currentWork.name)
 
   if (!currentWork) {
-    return <Loading />;
+    return <NotFound />
   }
 
   // found work destructuring
@@ -37,13 +37,13 @@ export default function SingleWork() {
     img,
     img: { single: singleImg },
     tasks,
-  } = currentWork;
+  } = currentWork
 
   const showWorkImgInModal = (img) => {
-    document.documentElement.style.overflowY = 'hidden';
-    setShowModal(true);
-    setModalImg({ ...img });
-  };
+    document.documentElement.style.overflowY = 'hidden'
+    setShowModal(true)
+    setModalImg({ ...img })
+  }
 
   return (
     <>
@@ -108,5 +108,5 @@ export default function SingleWork() {
         )}
       </section>
     </>
-  );
+  )
 }

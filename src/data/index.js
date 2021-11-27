@@ -487,4 +487,42 @@ export const works = [
       single: 'pricing-component.png',
     },
   },
+  {
+    id: 6,
+    name: 'Página de combos de un videojuego',
+    description: 'Lista de combos de un personaje de un videojuego.',
+    tools: [
+      {
+        id: 0,
+        name: 'React',
+      },
+      {
+        id: 1,
+        name: 'React Router',
+      },
+      {
+        id: 2,
+        name: 'Lazy Load',
+      },
+      {
+        id: 3,
+        name: 'Custom hooks',
+      },
+      {
+        id: 4,
+        name: 'hook Context',
+      },
+      {
+        id: 5,
+        name: 'Styled Components',
+      },
+    ],
+    url: {
+      external: 'https://zed-combos.netlify.app',
+      repository: 'https://github.com/StyledDEV/zed',
+    },
+    img: {
+      single: 'zed-combos.png',
+    },
+  },
 ]

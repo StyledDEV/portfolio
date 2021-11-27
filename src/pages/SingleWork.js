@@ -3,6 +3,7 @@ import useDocumentTitle from '../hooks/useDocumentTitle'
 import NotFound from '../pages/NotFound'
 import Modal from '../components/Modal'
 import SingleTask from '../components/SingleTask'
+import SingleSkill from '../components/SingleSkill'
 import { DataContext } from '../context/DataContext'
 import { Link, useParams } from 'react-router-dom'
 import useFind from '../hooks/useFind'
@@ -33,6 +34,8 @@ export default function SingleWork() {
   // found work destructuring
   const {
     name: workName,
+    description: workDescription,
+    tools: workTools,
     url: { external: externalUrl, repository },
     img,
     img: { single: singleImg },
@@ -55,6 +58,17 @@ export default function SingleWork() {
         <h2 className="section-secondary-title section-single-work-title">
           {workName}
         </h2>
+        <p className="section-paragraph section-single-work-paragraph">
+          {workDescription}
+        </p>
+        <h3 className="section-title">Herramientas usadas</h3>
+        {workTools && (
+          <ul className="section-single-work-tools">
+            {workTools.map((tool) => (
+              <SingleSkill key={tool.id} skill={tool} />
+            ))}
+          </ul>
+        )}
         <div className="section-single-work-main-info">
           {img && (
             <>

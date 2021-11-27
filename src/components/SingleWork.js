@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 export default function SingleWork({ work }) {
   const {
     name,
+    description,
     img: { single: singleImg },
   } = work
   const formattedName = name.toLowerCase().replaceAll(' ', '-')
@@ -15,8 +16,11 @@ export default function SingleWork({ work }) {
           src={`../images/work/${singleImg}`}
           alt={`Previsualización de ${name}`}
         />
-        <div>
+        <div className="section-work-list-item-info">
           <h4 className="section-work-list-item-name">{name}</h4>
+          <p className="section-work-list-item-desc">
+            {description}
+          </p>
         </div>
       </div>
     </Link>

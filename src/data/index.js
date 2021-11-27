@@ -118,6 +118,38 @@ export const works = [
   {
     id: 0,
     name: 'TecnoSavio',
+    description:
+      'Landing page para negocio de reparación de electrodomésticos.',
+    tools: [
+      {
+        id: 0,
+        name: 'HTML',
+      },
+      {
+        id: 1,
+        name: 'CSS',
+      },
+      {
+        id: 2,
+        name: 'JavaScript',
+      },
+      {
+        id: 3,
+        name: 'Google Maps',
+      },
+      {
+        id: 4,
+        name: 'WhatsApp Web',
+      },
+      {
+        id: 5,
+        name: 'Figma',
+      },
+      {
+        id: 6,
+        name: 'Git',
+      },
+    ],
     url: {
       external: 'https://servicesavio.com',
     },
@@ -160,6 +192,30 @@ export const works = [
   {
     id: 1,
     name: 'Juego de piedra papel o tijera',
+    description:
+      'Mini juego web de piedra, papel o tijera, con guardado local.',
+    tools: [
+      {
+        id: 0,
+        name: 'HTML',
+      },
+      {
+        id: 1,
+        name: 'CSS',
+      },
+      {
+        id: 2,
+        name: 'JavaScript',
+      },
+      {
+        id: 3,
+        name: 'Local Storage',
+      },
+      {
+        id: 4,
+        name: 'Git',
+      },
+    ],
     url: {
       external: 'https://styleddev.github.io/rock-paper-scissors-game',
       repository: 'https://github.com/styleddev/rock-paper-scissors-game',
@@ -197,6 +253,25 @@ export const works = [
   {
     id: 2,
     name: 'DiscordVote',
+    description: 'Plataforma para calificar servidores y bots de Discord.',
+    tools: [
+      {
+        id: 0,
+        name: 'React',
+      },
+      {
+        id: 1,
+        name: 'Styled Components / SCSS',
+      },
+      {
+        id: 2,
+        name: 'Git',
+      },
+      {
+        id: 3,
+        name: 'Inglés',
+      },
+    ],
     url: {
       external: 'https://discordvote.net',
     },
@@ -239,6 +314,28 @@ export const works = [
   {
     id: 3,
     name: 'Portafolio propio',
+    tools: [
+      {
+        id: 0,
+        name: 'React',
+      },
+      {
+        id: 1,
+        name: 'React Router',
+      },
+      {
+        id: 2,
+        name: 'hook useContext',
+      },
+      {
+        id: 3,
+        name: 'CSS',
+      },
+      {
+        id: 4,
+        name: 'Figma',
+      },
+    ],
     url: {
       external: 'https://agustin-piriz.com',
       repository: 'https://github.com/StyledDEV/portfolio',
@@ -294,6 +391,22 @@ export const works = [
   {
     id: 4,
     name: 'Grocery bud',
+    description:
+      'Página para gestionar alimentos de manera muy básica. Tiene guardado local.',
+    tools: [
+      {
+        id: 0,
+        name: 'React',
+      },
+      {
+        id: 1,
+        name: 'hook useReducer',
+      },
+      {
+        id: 2,
+        name: 'Local Storage',
+      },
+    ],
     url: {
       external: 'https://agustin-react-learning-grocery-bud.netlify.app',
       repository: 'https://github.com/StyledDEV/grocery-bud',
@@ -349,6 +462,22 @@ export const works = [
   {
     id: 5,
     name: 'Componente de precios',
+    description:
+      'Reto de FrontendMentor creado según el diseño propuesto y con cambios al presionar un botón.',
+    tools: [
+      {
+        id: 0,
+        name: 'HTML',
+      },
+      {
+        id: 1,
+        name: 'CSS',
+      },
+      {
+        id: 2,
+        name: 'JavaScript',
+      },
+    ],
     url: {
       external: 'https://styleddev.github.io/challenges/pricing-component',
       repository:

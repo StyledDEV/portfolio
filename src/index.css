@@ -41,9 +41,9 @@
   --section-tertiary-title-fs: 1.15rem;
   --section-main-paragraph-fs: 1rem;
   --section-contact-title-fs: 3rem;
-  --section-work-item-name-bg: linear-gradient(
+  --section-work-item-info-bg: linear-gradient(
     0,
-    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.95),
     transparent
   );
 }
@@ -390,7 +390,7 @@ a.section-skills-list-item {
   transform: scale(1.15);
 }
 
-.section-work-list-item:hover .section-work-list-item-name {
+.section-work-list-item:hover .section-work-list-item-info {
   opacity: 1;
   visibility: visible;
 }
@@ -404,27 +404,50 @@ a.section-skills-list-item {
   transition: transform 0.3s;
 }
 
-.section-work-list-item-name {
+.section-work-list-item-info {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
-  min-height: 5rem;
-  max-height: 300px;
   z-index: 100;
-  padding: 0.5rem 1rem;
-  font-size: 1.25rem;
-  font-weight: 400;
-  color: var(--secondary-clr-text);
-  background: var(--section-work-item-name-bg);
+  width: 100%;
+  height: auto;
+  min-height: 5rem;
+  max-height: 50%;
   overflow-y: auto;
-  visibility: hidden;
+  padding: 0.5rem 1rem;
+  background: var(--section-work-item-info-bg);
   opacity: 0;
+  visibility: hidden;
   transition: all 0.3s;
 }
 
+.section-work-list-item-name {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--secondary-clr-text);
+}
+
+.section-work-list-item-desc {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--secondary-clr-1);
+}
+
+.section-single-work-tools {
+  max-width: 500px;
+}
+
+.section-single-work-tools .section-skills-list-item {
+  background-color: var(--secondary-clr-1);
+}
+
 .section-single-work-title {
-  margin: 2rem 0 1.5rem 0;
+  margin: 2rem 0 0.25rem 0;
+}
+
+.section-single-work-paragraph {
+  max-width: 500px;
+  margin-bottom: 1.5rem;
 }
 
 .section-single-work-main-info {
